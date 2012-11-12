@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shake and Glow | RodriguezCommaJ</title>
+		<link href="css/style.css" rel="stylesheet"/>
+        <script type="text/javascript">
+
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-33601826-1']);
+                    _gaq.push(['_setDomainName', 'rodriguezcommaj.com']);
+                    _gaq.push(['_trackPageview']);
+
+                    (function () {
+                        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                    })();
+
+        </script>
+	</head>
+	<body>
+
+        <div id="content">
+            <h1>Shake and Glow</h1>
+            <p><a href="http://github.com/rodriguezcommaj/shakeandglow">Shake and Glow</a> is a super simple, really useless exercise to get mess around with the CSS3 text-shadow, transition, and keyframe animation properties. Only bothered testing it in the most recent versions of Firefox and Chrome, so don't use this in production, or else you're likely to get laughed at by your QA team. Hell, I didn't even bother with the other vendor prefixes.</p>
+            <p>Pretty simple stuff going on - text-shadows create the glow effect with multiple shadows for the element. I used <code>rgba</code> for the color so that I could control opacity. It uses white for the shadow, with lowered opacity so that it looks nice on pretty much any background color. The shake part uses a very quick, infinitely repeating keyframe animation to change the <code>font-size</code> and make it induce seizures.</p>
+            <p><a href="http://github.com/rodriguezcommaj/shakeandglow">Check it out on GitHub.</a></p>
+            <br>
+            <br>
+            <a href="" class="glow">This is a glow.</a><br><br>
+            <a href="" class="shake">This is a shake.</a><br><br>
+            <a href="" class="glow shake">This is the future?</a>
+        </div>
+
+	</body>
+</html>

@@ -1,0 +1,92 @@
+/*  ================================================
+
+	SHAKE AND GLOW
+
+	An experiment with CSS3 text-shadow, transitions
+	and keyframe animations. 
+
+	Use as a starting point for custom animations
+	and link effects. 
+
+	Written by Jason Rodriguez (http://rodriguezcommaj.com)
+
+	================================================ */
+
+
+
+
+/* Basic Page Stuff -------------------------------------- */
+
+*       	{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body 		{ color:#ccc; font-family:Arial, Sans-Serif; font-size:100%; background:#330033; }
+a 			{ text-decoration:none; color:#7ac0a8; }
+a:hover 	{ color:#60437d; }
+#content    { width:40%; height:400px; margin: 8em auto; }
+
+/* The Classes ------------------------------------------- */
+
+.glow       { 
+	font-size:2em;
+	/* Set color to transparent to keep it nice and blurry */
+	color: transparent; 
+	text-decoration: none;
+	/* Use rgba for white with decreasing opacity to work with any background color */
+	text-shadow:
+		0 0 5px rgba(255,255,255,1),
+		0 0 10px rgba(255,255,255,1),
+		0 0 15px rgba(255,255,255,1),
+		0 0 20px rgba(255,255,255,0.8),
+		0 0 25px rgba(255,255,255,0.6),
+		0 0 30px rgba(255,255,255,0.4)
+	;
+	-webkit-transition:all 0.6s ease;
+	transition:all 0.6s ease;
+}
+
+.glow:hover { 
+	color: #fff; 
+	/* Same color shadows, just tightened up */
+	text-shadow:
+		0 0 1px rgba(255,255,255,1),
+		0 0 2px rgba(255,255,255,1),
+		0 0 3px rgba(255,255,255,1),
+		0 0 4px rgba(255,255,255,0.8),
+		0 0 5px rgba(255,255,255,0.6),
+		0 0 6px rgba(255,255,255,0.4)
+	;
+}
+
+.shake 	{ font-size:2em; }
+
+.shake:hover {
+	-webkit-animation-duration:0.02s;
+	-webkit-animation-name:shake;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	animation-duration:0.01s;
+	animation-name:shake;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+
+/* Keyframes ---------------------------------------------- */
+
+@-webkit-keyframes shake {
+  from {
+    font-size:2em;
+  }
+ 
+  to {
+    font-size:2.1em;
+  }
+}
+
+@keyframes shake {
+  from {
+    font-size:2em;
+  }
+ 
+  to {
+    font-size:2.1em;
+  }
+}
